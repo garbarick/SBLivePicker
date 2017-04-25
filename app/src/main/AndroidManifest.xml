@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.net.serbis.livepicker" >
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app"
+        android:label="@string/app">
+
+        <activity
+            android:name=".Main"
+            android:label="@string/app">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.service.wallpaper.LIVE_WALLPAPER_CHOOSER"/>
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
